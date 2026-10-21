@@ -8,7 +8,7 @@ The system combines AI-assisted document and tender understanding with determini
 
 ## 🚀 Live Demo
 
-**[Open the Live Demo →](http://gem-compliance-frontend-aarsh.s3-website-us-east-1.amazonaws.com/)**
+**[Open the Live Demo →](https://aarshmalik35-afk.github.io/GeM-compliance-frontend-/)**
 
 > This is a deployed prototype created for demonstration purposes.
 
