@@ -18,11 +18,14 @@ load_dotenv(dotenv_path=ENV_PATH)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
-ALLOWED_ORIGINS = os.getenv(
-    "ALLOWED_ORIGINS",
-    "http://localhost:3000,http://localhost:5173"
-).split(",")
-
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv(
+        "ALLOWED_ORIGINS",
+        "http://localhost:3000,http://localhost:5173,https://aarshmalik35-afk.github.io"
+    ).split(",")
+    if origin.strip()
+]
 print("GEMINI KEY LOADED:", bool(GEMINI_API_KEY))
 print("GEMINI KEY LENGTH:", len(GEMINI_API_KEY))
 print("GEMINI MODEL:", GEMINI_MODEL)
